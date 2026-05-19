@@ -1,0 +1,214 @@
+/* ============================================================
+   AADHAAR ASHRAM — Base & Reset Styles
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: var(--text-base);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Skip Link ─────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  background: var(--clr-primary);
+  color: #fff;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  z-index: 9999;
+  transition: top var(--dur-fast);
+  text-decoration: none;
+}
+.skip-link:focus { top: var(--space-4); }
+
+/* ── Typography Base ───────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--clr-text);
+  font-weight: 700;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, var(--text-hero)); }
+h2 { font-size: clamp(1.8rem, 3.5vw, var(--text-3xl)); }
+h3 { font-size: clamp(1.3rem, 2.5vw, var(--text-2xl)); }
+h4 { font-size: clamp(1.1rem, 2vw, var(--text-xl)); }
+h5 { font-size: var(--text-lg); }
+h6 { font-size: var(--text-base); }
+
+p {
+  line-height: var(--leading-relaxed);
+  color: var(--clr-text-mid);
+  margin-bottom: var(--space-4);
+}
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: color var(--dur-normal) var(--ease-out);
+}
+a:hover { color: var(--clr-primary-dark); }
+a:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol { list-style: none; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+button:focus-visible {
+  outline: 3px solid var(--clr-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ── Container ─────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+.container-sm {
+  max-width: var(--container-sm);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+/* ── Section Spacing ───────────────────────── */
+.section { padding: var(--section-py) 0; }
+.section-sm { padding: var(--space-16) 0; }
+.section-lg { padding: calc(var(--section-py) * 1.5) 0; }
+
+/* ── Section Labels ────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: var(--space-4);
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--clr-primary);
+  border-radius: 2px;
+}
+
+.section-title {
+  margin-bottom: var(--space-5);
+}
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--clr-text-mid);
+  max-width: 600px;
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Grid Utilities ────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--space-8); }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-8); }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--space-6); }
+
+@media (max-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(2,1fr); }
+  .grid-3 { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ── Flex Utilities ────────────────────────── */
+.flex        { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between{ display: flex; align-items: center; justify-content: space-between; }
+.flex-col    { display: flex; flex-direction: column; }
+.gap-4  { gap: var(--space-4); }
+.gap-6  { gap: var(--space-6); }
+.gap-8  { gap: var(--space-8); }
+
+/* ── Text Utilities ────────────────────────── */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-sm     { font-size: var(--text-sm); }
+.text-muted  { color: var(--clr-text-muted); }
+
+/* ── Decorative Divider ────────────────────── */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-light));
+  border-radius: var(--radius-full);
+  margin: var(--space-6) 0;
+}
+.divider-center { margin-left: auto; margin-right: auto; }
+
+/* ── Visually Hidden (Accessibility) ──────── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--clr-bg-alt); }
+::-webkit-scrollbar-thumb {
+  background: var(--clr-primary-light);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--clr-primary); }
+
+/* ── Selection ─────────────────────────────── */
+::selection {
+  background: var(--clr-primary-pale);
+  color: var(--clr-primary-dark);
+}

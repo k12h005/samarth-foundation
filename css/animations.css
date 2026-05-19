@@ -1,0 +1,112 @@
+/* ============================================================
+   AADHAAR ASHRAM — Animation System
+   ============================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(232,131,74,0.5); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 12px rgba(232,131,74,0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(232,131,74,0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translateX(0); }
+  50%  { transform: scale(1.06) translateX(-10px); }
+  100% { transform: scale(1)    translateX(0); }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes progressFill {
+  from { width: 0%; }
+}
+
+/* ── Scroll-triggered Animation Classes ──── */
+.animate {
+  opacity: 1;
+  transition: opacity var(--dur-enter) var(--ease-out),
+              transform var(--dur-enter) var(--ease-out);
+}
+.animate.is-visible { opacity: 1; transform: none !important; }
+
+.anim-fade-up    { transform: none; }
+.anim-fade-left  { transform: none; }
+.anim-fade-right { transform: none; }
+.anim-scale-in   { transform: none; }
+
+/* Stagger delays */
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 300ms; }
+.delay-4 { transition-delay: 400ms; }
+.delay-5 { transition-delay: 500ms; }
+.delay-6 { transition-delay: 600ms; }
+
+/* ── Hero Ken Burns ─────────────────────── */
+.hero-bg-img {
+  animation: kenBurns 20s ease-in-out infinite;
+}
+
+/* ── Float Animation ─────────────────────── */
+.float { animation: float 4s ease-in-out infinite; }
+
+/* ── Pulse Ring ─────────────────────────── */
+.pulse { animation: pulse-ring 2.5s cubic-bezier(0.455,0.03,0.515,0.955) infinite; }
+
+/* ── Progress bar fill ──────────────────── */
+.progress-animate {
+  animation: progressFill 1.5s var(--ease-out) forwards;
+}
+
+/* ── Shimmer Loading ─────────────────────── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--clr-bg-alt) 25%,
+    var(--clr-border-light) 50%,
+    var(--clr-bg-alt) 75%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── Nav entrance ───────────────────────── */
+.nav-enter { animation: slideDown var(--dur-enter) var(--ease-out) both; }
+
+/* ── Page entrance ──────────────────────── */
+.page-enter { animation: fadeIn var(--dur-enter) var(--ease-out) both; }
+
+/* ── Counter animation ──────────────────── */
+.counter-animate { animation: countUp var(--dur-enter) var(--ease-out) both; }
