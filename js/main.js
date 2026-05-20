@@ -230,3 +230,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   document.body.classList.add('page-enter');
 });
+
+/* ── Happiness Video Modal ───────────────── */
+const happinessPlayBtns = document.querySelectorAll('.happiness-play-btn');
+happinessPlayBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const videoUrl = btn.getAttribute('data-video');
+    if (videoUrl) {
+      const modal = document.createElement('div');
+      modal.className = 'video-modal';
+      modal.innerHTML = `
+        <div class="video-modal-content">
+          <button class="video-modal-close">&times;</button>
+          <iframe src="${videoUrl}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+      
+      const closeModal = () => {
+        document.body.removeChild(modal);
+        document.body.style.overflow = '';
+      };
+      
+      modal.querySelector('.video-modal-close').addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+  });
+});

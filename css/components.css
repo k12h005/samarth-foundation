@@ -739,3 +739,112 @@
 .tag-amber { background: var(--clr-primary-pale); color: var(--clr-primary-dark); }
 .tag-green { background: var(--clr-secondary-pale); color: var(--clr-secondary-dark); }
 .tag-gold  { background: rgba(212,168,67,0.12); color: #9A7520; }
+
+/* ── HAPPINESS FEED ────────────────────────────────────────── */
+.happiness-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+.happiness-stat {
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--clr-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-border-light);
+}
+.happiness-emoji {
+  font-size: 3rem;
+  margin-bottom: var(--space-3);
+}
+.happiness-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-secondary-dark);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.happiness-label {
+  font-size: var(--text-sm);
+  color: var(--clr-text-mid);
+  font-weight: 600;
+}
+
+.happiness-feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.happiness-card {
+  background: var(--clr-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--clr-border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--dur-normal) var(--ease-out);
+}
+.happiness-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.happiness-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.happiness-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--clr-secondary), var(--clr-secondary-light));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-base);
+  flex-shrink: 0;
+}
+.happiness-name {
+  font-weight: 700;
+  color: var(--clr-text);
+  font-size: var(--text-base);
+}
+.happiness-date {
+  font-size: var(--text-xs);
+  color: var(--clr-text-muted);
+}
+.happiness-rating {
+  margin-left: auto;
+  font-size: 1rem;
+}
+.happiness-card p {
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--clr-text-mid);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+.happiness-tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .happiness-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .happiness-feed {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .happiness-stats {
+    grid-template-columns: 1fr;
+  }
+}

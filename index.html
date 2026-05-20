@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/happiness.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -36,6 +37,7 @@
       <ul class="nav-links">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#residents" class="nav-link">Residents</a></li>
+        <li><a href="#happiness" class="nav-link">Happiness</a></li>
         <li><a href="#programs" class="nav-link">Programs</a></li>
         <li><a href="#volunteer" class="nav-link">Volunteer</a></li>
       </ul>
@@ -51,6 +53,7 @@
     <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
     <a href="#about" class="nav-link">About</a>
     <a href="#residents" class="nav-link">Residents</a>
+    <a href="#happiness" class="nav-link">Happiness</a>
     <a href="#programs" class="nav-link">Programs</a>
     <a href="#volunteer" class="nav-link">Volunteer</a>
     <a href="#donate" class="btn btn-primary mt-4">Donate Now</a>
@@ -140,6 +143,111 @@
               <span style="font-size: var(--text-sm); font-family: var(--font-body); font-style: normal; font-weight: 600; color: var(--clr-primary); margin-top: 8px; display: block;">— Shanti Devi, 72</span>
             </blockquote>
             <a href="#programs" class="btn btn-secondary mt-4">Discover Our Programs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONTHLY HAPPINESS FEED -->
+    <section id="happiness" class="section section-lg bg-warm">
+      <div class="container">
+        <div class="text-center" style="max-width: 700px; margin: 0 auto var(--space-12);">
+          <span class="section-label">Monthly Happiness Feed</span>
+          <h2 class="section-title">How Our Residents Feel</h2>
+          <p>Real-time insights into the comfort and happiness of our community members.</p>
+        </div>
+        
+        <div class="happiness-stats animate anim-fade-up">
+          <div class="happiness-stat">
+            <div class="happiness-emoji">😊</div>
+            <div class="happiness-number counter-animate" data-target="92" data-suffix="%">0</div>
+            <div class="happiness-label">Overall Satisfaction</div>
+          </div>
+          <div class="happiness-stat">
+            <div class="happiness-emoji">🏠</div>
+            <div class="happiness-number counter-animate" data-target="95" data-suffix="%">0</div>
+            <div class="happiness-label">Feel at Home</div>
+          </div>
+          <div class="happiness-stat">
+            <div class="happiness-emoji">❤️</div>
+            <div class="happiness-number counter-animate" data-target="89" data-suffix="%">0</div>
+            <div class="happiness-label">Emotional Well-being</div>
+          </div>
+          <div class="happiness-stat">
+            <div class="happiness-emoji">🍽️</div>
+            <div class="happiness-number counter-animate" data-target="97" data-suffix="%">0</div>
+            <div class="happiness-label">Food Quality</div>
+          </div>
+        </div>
+        
+        <div class="happiness-feed">
+          <div class="happiness-card animate anim-fade-up delay-1">
+            <div class="happiness-media">
+              <img src="assets/images/resident-1.jpg" alt="Ramesh Kumar" class="happiness-image">
+              <button class="happiness-play-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+            </div>
+            <div class="happiness-card-content">
+              <div class="happiness-card-header">
+                <div>
+                  <div class="happiness-name">Ramesh Kumar</div>
+                  <div class="happiness-date">2 days ago</div>
+                </div>
+                <div class="happiness-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <p>"The staff treats us like family. I feel safe and cared for every single day."</p>
+              <div class="happiness-tags">
+                <span class="tag tag-green">Care Quality</span>
+                <span class="tag tag-amber">Staff</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="happiness-card animate anim-fade-up delay-2">
+            <div class="happiness-media">
+              <img src="assets/images/resident-2.jpg" alt="Meera Sharma" class="happiness-image">
+              <button class="happiness-play-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+            </div>
+            <div class="happiness-card-content">
+              <div class="happiness-card-header">
+                <div>
+                  <div class="happiness-name">Meera Sharma</div>
+                  <div class="happiness-date">5 days ago</div>
+                </div>
+                <div class="happiness-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <p>"The food is delicious and reminds me of home. They remember my preferences!"</p>
+              <div class="happiness-tags">
+                <span class="tag tag-green">Food</span>
+                <span class="tag tag-gold">Comfort</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="happiness-card animate anim-fade-up delay-3">
+            <div class="happiness-media">
+              <img src="assets/images/resident-3.jpg" alt="Anil Patel" class="happiness-image">
+              <button class="happiness-play-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+            </div>
+            <div class="happiness-card-content">
+              <div class="happiness-card-header">
+                <div>
+                  <div class="happiness-name">Anil Patel</div>
+                  <div class="happiness-date">1 week ago</div>
+                </div>
+                <div class="happiness-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <p>"I've made wonderful friends here. We play cards, share stories, and laugh together daily."</p>
+              <div class="happiness-tags">
+                <span class="tag tag-green">Community</span>
+                <span class="tag tag-amber">Activities</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -307,5 +415,6 @@
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
