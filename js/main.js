@@ -128,36 +128,44 @@ if (progressFill) {
   pObserver.observe(progressFill);
 }
 
-/* ── Gallery Lightbox ────────────────────── */
-const galleryItems = document.querySelectorAll('.gallery-item');
+/* ── Masonry Gallery Lightbox ────────────── */
 let lightbox = null;
-
 function createLightbox(src, alt) {
+  if (lightbox) return;
   lightbox = document.createElement('div');
-  lightbox.style.cssText = `
-    position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);
-    display:flex;align-items:center;justify-content:center;padding:20px;
-    cursor:zoom-out;animation:fadeIn 0.2s ease;
-  `;
+  lightbox.className = 'lightbox-overlay';
   const img = document.createElement('img');
-  img.src = src; img.alt = alt || '';
-  img.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 20px 80px rgba(0,0,0,0.5);object-fit:contain;';
-  lightbox.appendChild(img);
-  lightbox.addEventListener('click', () => { document.body.removeChild(lightbox); lightbox = null; });
+  img.src = src; img.alt = alt || ''; img.className = 'lightbox-img';
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'lightbox-close'; closeBtn.innerHTML = '&times;'; closeBtn.setAttribute('aria-label','Close');
+  const caption = document.createElement('div');
+  caption.className = 'lightbox-caption'; caption.textContent = alt || '';
+  lightbox.appendChild(closeBtn); lightbox.appendChild(img); lightbox.appendChild(caption);
+  const close = () => { document.body.removeChild(lightbox); lightbox = null; };
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', function esc(e) { if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); } });
   document.body.appendChild(lightbox);
 }
 
-galleryItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const img = item.querySelector('img');
-    if (img) createLightbox(img.src, img.alt);
-  });
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      const img = item.querySelector('img');
-      if (img) createLightbox(img.src, img.alt);
-    }
+document.querySelectorAll('.gallery-masonry-item').forEach(item => {
+  const open = () => { const img = item.querySelector('img'); if (img) createLightbox(img.src, img.alt); };
+  item.addEventListener('click', open);
+  item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+});
+
+/* ── Gallery Filter ──────────────────────── */
+const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+const masonryItems = document.querySelectorAll('.gallery-masonry-item');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.getAttribute('data-filter');
+    masonryItems.forEach(item => {
+      const show = filter === 'all' || item.getAttribute('data-category') === filter;
+      item.style.display = show ? 'block' : 'none';
+    });
   });
 });
 
