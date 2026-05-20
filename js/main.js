@@ -1,10 +1,10 @@
-// ============================================================
-// AADHAAR ASHRAM — Main JavaScript (Fixed & Complete)
+﻿// ============================================================
+// AADHAAR ASHRAM â€” Main JavaScript (Fixed & Complete)
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── Navbar scroll behaviour ───────────── */
+  /* â”€â”€ Navbar scroll behaviour â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const navbar = document.querySelector('.navbar');
   const hamburger = document.querySelector('.hamburger');
   const mobileNav = document.querySelector('.mobile-nav');
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateNav();
   window.addEventListener('scroll', updateNav, { passive: true });
 
-  /* ── Hamburger / Mobile Nav ───────────── */
+  /* â”€â”€ Hamburger / Mobile Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   function closeMobileNav() {
     mobileNav.classList.remove('open');
     document.body.style.overflow = '';
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
   mobileNav && mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
 
-  /* ── Smooth scroll for ALL anchor links ── */
+  /* â”€â”€ Smooth scroll for ALL anchor links â”€â”€ */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const target = document.querySelector(link.getAttribute('href'));
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Active nav link on scroll ──────────── */
+  /* â”€â”€ Active nav link on scroll â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
   window.addEventListener('scroll', () => {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { passive: true });
 
-  /* ── Scroll-triggered Animations ────────── */
+  /* â”€â”€ Scroll-triggered Animations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const animEls = document.querySelectorAll('.animate');
   if ('IntersectionObserver' in window && animEls.length) {
     const observer = new IntersectionObserver((entries) => {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animEls.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ── Counter Animation ───────────────────── */
+  /* â”€â”€ Counter Animation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   function animateCounter(el) {
     const target = parseInt(el.getAttribute('data-target'), 10);
     const suffix = el.getAttribute('data-suffix') || '';
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObs.observe(c));
   }
 
-  /* ── FAQ Accordion ───────────────────────── */
+  /* â”€â”€ FAQ Accordion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Donation Widget ─────────────────────── */
+  /* â”€â”€ Donation Widget â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const donationAmountBtns = document.querySelectorAll('.donation-amount-btn');
   const customInput = document.querySelector('.donation-custom-input');
   const donationTabs = document.querySelectorAll('.donation-tab');
@@ -128,16 +128,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Donate Securely — Thank You Toast ───── */
+  /* â”€â”€ Donate Securely â€” Thank You Toast â”€â”€â”€â”€â”€ */
   const donateBtn = document.querySelector('.donate-secure-btn');
   if (donateBtn) {
     donateBtn.addEventListener('click', () => {
       const amount = customInput ? customInput.value : '500';
-      showToast(`🙏 Thank you! ₹${parseInt(amount).toLocaleString('en-IN')} donation initiated. You'll receive a confirmation + 80G receipt by email.`, 'success');
+      showToast(`ðŸ™ Thank you! â‚¹${parseInt(amount).toLocaleString('en-IN')} donation initiated. You'll receive a confirmation + 80G receipt by email.`, 'success');
     });
   }
 
-  /* ── Watch Our Story — Video Modal ──────── */
+  /* â”€â”€ Watch Our Story â€” Video Modal â”€â”€â”€â”€â”€â”€â”€â”€ */
   const videoBtns = document.querySelectorAll('.hero-video-btn');
   videoBtns.forEach(btn => {
     btn.addEventListener('click', () => openVideoModal());
@@ -152,13 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="video-modal-embed">
           <iframe
             src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
-            title="Aadhaar Ashram — Our Story"
+            title="Aadhaar Ashram â€” Our Story"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen
           ></iframe>
         </div>
-        <p class="video-modal-caption">Aadhaar Ashram — Our Story</p>
+        <p class="video-modal-caption">Aadhaar Ashram â€” Our Story</p>
       </div>`;
     const close = () => { document.body.removeChild(modal); document.body.style.overflow = ''; };
     modal.querySelector('.video-modal-close').addEventListener('click', close);
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   }
 
-  /* ── Gallery Lightbox ────────────────────── */
+  /* â”€â”€ Gallery Lightbox â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   let lightbox = null;
   function createLightbox(src, alt) {
     if (lightbox) return;
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
   });
 
-  /* ── Gallery Filter ──────────────────────── */
+  /* â”€â”€ Gallery Filter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const filterBtns = document.querySelectorAll('.gallery-filter-btn');
   const masonryItems = document.querySelectorAll('.gallery-masonry-item');
   filterBtns.forEach(btn => {
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Volunteer Form ──────────────────────── */
+  /* â”€â”€ Volunteer Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const volunteerForm = document.querySelector('#volunteer-form');
   if (volunteerForm) {
     volunteerForm.addEventListener('submit', e => {
@@ -225,10 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = volunteerForm.querySelector('input[type=email]').value;
       const btn = volunteerForm.querySelector('[type=submit]');
       const originalText = btn.textContent;
-      btn.textContent = '✓ Application Sent!';
+      btn.textContent = 'âœ“ Application Sent!';
       btn.style.background = 'linear-gradient(135deg, var(--clr-secondary), var(--clr-secondary-dark))';
       btn.disabled = true;
-      showToast(`✅ Application received! We'll reach out to ${email} within 24 hours.`, 'success');
+      showToast(`âœ… Application received! We'll reach out to ${email} within 24 hours.`, 'success');
       setTimeout(() => {
         volunteerForm.reset();
         btn.textContent = originalText;
@@ -238,28 +238,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── Newsletter Form ─────────────────────── */
+  /* â”€â”€ Newsletter Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   document.querySelectorAll('.footer-newsletter').forEach(form => {
     const btn = form.querySelector('button');
     const input = form.querySelector('input[type=email]');
     if (btn && input) {
       btn.addEventListener('click', () => {
         if (!input.value) { input.focus(); return; }
-        showToast('📩 Subscribed! You\'ll receive our next impact update.', 'success');
+        showToast('ðŸ“© Subscribed! You\'ll receive our next impact update.', 'success');
         input.value = '';
       });
     }
   });
 
-  /* ── Contact Form ────────────────────────── */
+  /* â”€â”€ Contact Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
       const btn = contactForm.querySelector('[type=submit]');
-      btn.textContent = '✓ Message Sent!';
+      btn.textContent = 'âœ“ Message Sent!';
       btn.disabled = true;
-      showToast('✅ Message sent! Our team will respond within 24 hours.', 'success');
+      showToast('âœ… Message sent! Our team will respond within 24 hours.', 'success');
       setTimeout(() => {
         contactForm.reset();
         btn.textContent = 'Send Message';
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── Toast Notification System ───────────── */
+  /* â”€â”€ Toast Notification System â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   function showToast(message, type = 'success') {
     const existing = document.querySelector('.toast-notification');
     if (existing) existing.remove();
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { toast.classList.remove('toast-visible'); setTimeout(() => toast.remove(), 400); }, 5000);
   }
 
-  /* ── Donate progress bar ─────────────────── */
+  /* â”€â”€ Donate progress bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   const progressFill = document.querySelector('.donation-progress-fill');
   if (progressFill) {
     const pObs = new IntersectionObserver((entries) => {
@@ -300,10 +300,39 @@ document.addEventListener('DOMContentLoaded', () => {
     pObs.observe(progressFill);
   }
 
-  /* ── Hero init ───────────────────────────── */
+  /* â”€â”€ Hero init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   if (document.querySelector('.hero')) {
     document.body.classList.add('has-hero');
     navbar.classList.add('hero-mode');
   }
 
+
+  /* Policy Modal */
+  const POLICY_CONTENT = {
+    privacy: { title: 'Privacy Policy', body: '<p><strong>Last updated: May 2026</strong></p><p>We collect your name, email, phone when you donate or volunteer. Payment details are processed securely and never stored. We never sell your data.</p><p>Email: info@aadhaarashram.org for data requests.</p>' },
+    terms: { title: 'Terms of Service', body: '<p><strong>Last updated: May 2026</strong></p><p>All donations are voluntary and non-refundable. 80G receipts issued within 7 days. Volunteers must be 18+. All content is property of Aadhaar Ashram and used with resident consent.</p>' }
+  };
+  document.querySelectorAll('.open-policy').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var type = link.getAttribute('data-policy');
+      var data = POLICY_CONTENT[type]; if (!data) return;
+      var modal = document.createElement('div'); modal.className = 'video-modal-overlay';
+      modal.innerHTML = '<div class="video-modal-inner" style="background:var(--clr-bg);border-radius:20px;max-width:600px;max-height:85vh;overflow-y:auto;cursor:default;padding:48px;"><button class="video-modal-close" style="background:var(--clr-bg-alt);color:var(--clr-text);border:1px solid var(--clr-border);top:16px;right:16px;" aria-label="Close">&times;</button><h2 style="font-family:var(--font-heading);color:var(--clr-text);margin-bottom:20px;">' + data.title + '</h2><div style="color:var(--clr-text-mid);line-height:1.8;font-size:17px;">' + data.body + '</div></div>';
+      var close = function() { document.body.removeChild(modal); document.body.style.overflow = ''; };
+      modal.querySelector('.video-modal-close').addEventListener('click', close);
+      modal.addEventListener('click', function(e2) { if (e2.target === modal) close(); });
+      document.body.appendChild(modal); document.body.style.overflow = 'hidden';
+    });
+  });
+
+  /* Instagram post click -> lightbox */
+  document.querySelectorAll('.insta-post').forEach(function(post) {
+    post.addEventListener('click', function() {
+      var img = post.querySelector('img');
+      var cap = post.querySelector('.insta-post-caption');
+      if (img) createLightbox(img.src, cap ? cap.textContent.trim() : img.alt);
+    });
+  });
 }); // end DOMContentLoaded
+
