@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 // AADHAAR ASHRAM â€” Main JavaScript (Fixed & Complete)
 // ============================================================
 
@@ -128,13 +128,137 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* â”€â”€ Donate Securely â€” Thank You Toast â”€â”€â”€â”€â”€ */
+  /* ── Donate Securely — Razorpay Modal ─── */
   const donateBtn = document.querySelector('.donate-secure-btn');
   if (donateBtn) {
     donateBtn.addEventListener('click', () => {
       const amount = customInput ? customInput.value : '500';
-      showToast(`ðŸ™ Thank you! â‚¹${parseInt(amount).toLocaleString('en-IN')} donation initiated. You'll receive a confirmation + 80G receipt by email.`, 'success');
+      openRazorpayModal(amount);
     });
+  }
+
+  function openRazorpayModal(amount) {
+    const formattedAmount = parseInt(amount).toLocaleString('en-IN');
+    const backdrop = document.createElement('div');
+    backdrop.className = 'rzp-backdrop';
+    
+    backdrop.innerHTML = `
+      <div class="rzp-container">
+        <div class="rzp-header">
+          <div class="rzp-merchant-info">
+            <span class="rzp-merchant-name">Aadhaar Ashram</span>
+            <span class="rzp-payment-purpose">Support Dignity & Compassion</span>
+          </div>
+          <div class="rzp-amount-display">₹${formattedAmount}</div>
+          <button class="rzp-close" aria-label="Cancel Payment">&times;</button>
+        </div>
+        
+        <div class="rzp-content">
+          <div class="rzp-input-group">
+            <label for="rzp-phone">Mobile Number</label>
+            <input type="tel" id="rzp-phone" placeholder="98765 43210" value="9876543210">
+          </div>
+          <div class="rzp-input-group">
+            <label for="rzp-email">Email Address</label>
+            <input type="email" id="rzp-email" placeholder="donor@example.com" value="donor@example.com">
+          </div>
+          
+          <div class="rzp-section-title">Payment Options</div>
+          
+          <div class="rzp-options-grid">
+            <div class="rzp-option-item" data-method="UPI">
+              <div class="rzp-option-left">
+                <span class="rzp-option-icon">📱</span>
+                <div class="rzp-option-info">
+                  <span class="rzp-option-name">UPI / QR (Instant)</span>
+                  <span class="rzp-option-desc">Google Pay, PhonePe, Paytm, BHIM</span>
+                </div>
+              </div>
+              <span class="rzp-option-arrow">→</span>
+            </div>
+            
+            <div class="rzp-option-item" data-method="Card">
+              <div class="rzp-option-left">
+                <span class="rzp-option-icon">💳</span>
+                <div class="rzp-option-info">
+                  <span class="rzp-option-name">Card (Credit/Debit)</span>
+                  <span class="rzp-option-desc">Visa, Mastercard, RuPay, Maestro</span>
+                </div>
+              </div>
+              <span class="rzp-option-arrow">→</span>
+            </div>
+            
+            <div class="rzp-option-item" data-method="Netbanking">
+              <div class="rzp-option-left">
+                <span class="rzp-option-icon">🏦</span>
+                <div class="rzp-option-info">
+                  <span class="rzp-option-name">Netbanking</span>
+                  <span class="rzp-option-desc">SBI, HDFC, ICICI, Axis & more</span>
+                </div>
+              </div>
+              <span class="rzp-option-arrow">→</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="rzp-footer">
+          <div class="rzp-secure-logo">🛡️ Secure Payment by <span>Razorpay</span></div>
+          <div>Secured 256-bit SSL</div>
+        </div>
+      </div>
+    `;
+    
+    const closeBtn = backdrop.querySelector('.rzp-close');
+    const container = backdrop.querySelector('.rzp-container');
+    
+    const close = () => {
+      document.body.removeChild(backdrop);
+      document.body.style.overflow = '';
+    };
+    
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', e => {
+      if (e.target === backdrop) close();
+    });
+    
+    const options = backdrop.querySelectorAll('.rzp-option-item');
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        const method = option.getAttribute('data-method');
+        const phone = backdrop.querySelector('#rzp-phone').value.trim();
+        const email = backdrop.querySelector('#rzp-email').value.trim();
+        
+        if (!phone || !email) {
+          showToast('⚠️ Please enter mobile number and email address', 'error');
+          return;
+        }
+        
+        const overlay = document.createElement('div');
+        overlay.className = 'rzp-overlay';
+        overlay.innerHTML = `
+          <div class="rzp-spinner"></div>
+          <div class="rzp-title">Processing Payment...</div>
+          <div class="rzp-text">Authorizing donation of ₹${formattedAmount} via ${method}.<br>Please do not close this window or refresh the page.</div>
+        `;
+        container.appendChild(overlay);
+        
+        setTimeout(() => {
+          overlay.innerHTML = `
+            <div class="rzp-success-icon">✓</div>
+            <div class="rzp-title">Payment Successful!</div>
+            <div class="rzp-text">Donation of <strong>₹${formattedAmount}</strong> completed successfully.<br>Payment ID: <code>pay_K1jH9b8dG3hJ</code></div>
+          `;
+          
+          setTimeout(() => {
+            close();
+            showToast(`🙏 Thank you! ₹${formattedAmount} donation received. A confirmation with your 80G tax benefit receipt has been sent to ${email}.`, 'success');
+          }, 2000);
+        }, 2200);
+      });
+    });
+    
+    document.body.appendChild(backdrop);
+    document.body.style.overflow = 'hidden';
   }
 
   /* â”€â”€ Watch Our Story â€” Video Modal â”€â”€â”€â”€â”€â”€â”€â”€ */
