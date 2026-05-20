@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aadhaar Ashram — Where Every Elder Finds Home</title>
-  <meta name="description" content="Aadhaar Ashram provides dignified, compassionate care for 340+ elderly residents in Delhi NCR. Donate, volunteer, or learn about our programs.">
+  <title>Aadhaar Ashram — Where Every Elder Finds Home | Old Age Home Delhi NCR</title>
+  <meta name="description" content="Aadhaar Ashram provides dignified, compassionate care for 340+ elderly residents in Delhi NCR. 80G certified NGO. Donate, volunteer, or learn about our programs.">
+  <link rel="canonical" href="https://aadhaarashram.org/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aadhaarashram.org/">
+  <meta property="og:title" content="Aadhaar Ashram — Where Every Elder Finds Home">
+  <meta property="og:description" content="Providing dignified, compassionate care for 340+ elders in Delhi NCR since 2008. 80G certified. Donate or volunteer today.">
+  <meta property="og:image" content="assets/images/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aadhaar Ashram — Where Every Elder Finds Home">
+  <meta name="twitter:description" content="340+ elders cared for with dignity in Delhi NCR. 80G certified NGO. Join us.">
+
+  <!-- Schema.org NGO Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Aadhaar Ashram",
+    "alternateName": "Where Every Elder Finds Home",
+    "url": "https://aadhaarashram.org",
+    "logo": "https://aadhaarashram.org/assets/images/hero.png",
+    "description": "Aadhaar Ashram is a Delhi NCR-based NGO providing dignified, compassionate care for 340+ elderly residents since 2008.",
+    "foundingDate": "2008",
+    "areaServed": "Delhi NCR, India",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-98100-00000",
+      "contactType": "Customer Support",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [
+      "https://facebook.com/aadhaarashram",
+      "https://instagram.com/aadhaarashram"
+    ]
+  }
+  </script>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -237,7 +273,8 @@
             </div>
             <p class="text-sm"><em>Join 1,200+ volunteers across Delhi NCR.</em></p>
             <form id="volunteer-form" style="margin-top: var(--space-6); display: flex; gap: var(--space-3);">
-              <input type="email" class="form-input" placeholder="Your Email Address" required style="flex: 1;">
+              <label for="volunteer-email" class="sr-only">Your Email Address</label>
+              <input id="volunteer-email" type="email" class="form-input" placeholder="Your Email Address" required style="flex: 1;" aria-required="true">
               <button type="submit" class="btn btn-green">Apply Now</button>
             </form>
           </div>
@@ -630,6 +667,16 @@
           <div class="name">Aadhaar Ashram</div>
           <div class="tagline">Where Every Elder Finds Home</div>
           <p>Providing dignified, compassionate care for elderly individuals in Delhi NCR since 2008. We believe aging should be a celebration of life.</p>
+          <div style="margin: var(--space-4) 0; display: flex; flex-direction: column; gap: var(--space-2);">
+            <a href="tel:+919810000000" style="color: rgba(255,255,255,0.85); font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;" aria-label="Call Aadhaar Ashram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+              +91 98100 00000
+            </a>
+            <a href="mailto:info@aadhaarashram.org" style="color: rgba(255,255,255,0.7); font-size: 14px; display: flex; align-items: center; gap: 8px; text-decoration: none;" aria-label="Email Aadhaar Ashram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              info@aadhaarashram.org
+            </a>
+          </div>
           <div class="footer-socials">
             <a href="https://facebook.com/aadhaarashram" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
@@ -665,7 +712,8 @@
           <h4>Newsletter</h4>
           <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px;">Get quarterly impact updates.</p>
           <div class="footer-newsletter">
-            <input type="email" placeholder="Email Address">
+            <label for="newsletter-email" class="sr-only">Email Address for Newsletter</label>
+            <input id="newsletter-email" type="email" placeholder="Email Address" aria-label="Email Address for Newsletter">
             <button class="btn btn-primary btn-sm" style="width: 100%;">Subscribe</button>
           </div>
           <div class="footer-reg">
