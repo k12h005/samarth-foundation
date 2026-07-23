@@ -1,0 +1,29 @@
+[
+  {
+    "id": "evt-1",
+    "slug": "diwali-celebration-2026",
+    "titleEn": "Diwali Celebration 2026",
+    "titleHi": "दिवाली उत्सव 2026",
+    "date": "2026-11-10",
+    "descEn": "A night of lamps, prayers, and sweets with residents and family members.",
+    "descHi": "निवासियों और परिवार के सदस्यों के साथ दीयों, प्रार्थनाओं और मिठाइयों की शाम।",
+    "status": "Published",
+    "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80",
+    "location": "Main Ashram Hall",
+    "activityType": "Social & Cultural"
+  },
+  {
+    "titleEn": "smp",
+    "titleHi": "एसएमपी",
+    "slug": "smp",
+    "date": "2026-07-19",
+    "descEn": "vwrgvrg",
+    "descHi": "vwrgvrg",
+    "status": "Published",
+    "relatedActivityId": "act-1",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxjmEtH0Cy62cvs_lmmA2VHbETnty120w_YlGowGP2Zg&s=10",
+    "id": "mrs4ewl2fl2ry",
+    "createdAt": "2026-07-19T18:19:59.990Z",
+    "updatedAt": "2026-07-19T18:19:59.990Z"
+  }
+]

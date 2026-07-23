@@ -1,0 +1,6 @@
+[
+  { "id": "srv-1", "titleEn": "24/7 Dedicated Caregiving", "titleHi": "24/7 समर्पित देखभाल", "descEn": "Round-the-clock assistance with mobility, personal hygiene, and medicine management by trained staff.", "descHi": "प्रशिक्षित कर्मचारियों द्वारा चलने-फिरने, व्यक्तिगत स्वच्छता और दवा प्रबंधन में चौबीसों घंटे सहायता।", "icon": "🏠" },
+  { "id": "srv-2", "titleEn": "Doctor-on-Call & Medical Care", "titleHi": "डॉक्टर-ऑन-कॉल और चिकित्सा देखभाल", "descEn": "Daily vital health tracking, regular checkups, and immediate ambulance/doctor dispatch for emergency assistance.", "descHi": "आपातकालीन सहायता के लिए दैनिक महत्वपूर्ण स्वास्थ्य ट्रैकिंग, नियमित जांच और तत्काल एम्बुलेंस / डॉक्टर प्रेषण।", "icon": "🏥" },
+  { "id": "srv-3", "titleEn": "Nutritious Diet plans", "titleHi": "पौष्टिक आहार योजनाएं", "descEn": "Freshly cooked pure-vegetarian meals customized to residents' medical conditions.", "descHi": "निवासियों की स्वास्थ्य स्थितियों के अनुरूप तैयार ताजा शाकाहारी भोजन।", "icon": "Coffee" },
+  { "id": "srv-4", "titleEn": "Counseling & Social Support", "titleHi": "परामर्श और सामाजिक सहायता", "descEn": "Individual counseling, group therapy, and community engagement to combat loneliness and boost morale.", "descHi": "अकेलेपन से निपटने और मनोबल बढ़ाने के लिए व्यक्तिगत परामर्श, समूह चिकित्सा और सामुदायिक जुड़ाव।", "icon": "User" }
+]

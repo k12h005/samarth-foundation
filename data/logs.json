@@ -1,0 +1,244 @@
+[
+  {
+    "id": "mrvkc00zauca3",
+    "timestamp": "2026-07-22T04:08:56.867Z",
+    "action": "UPDATE",
+    "target": "settings",
+    "details": "Updated site configuration settings",
+    "before": null,
+    "after": {
+      "mealsServed": 150000,
+      "residentsServed": 340,
+      "yearsOfService": 17,
+      "phoneMain": "+91 98765 43210",
+      "phoneEmergency": "+91 99999 88888",
+      "primaryEmail": "info@samarthfoundation.org",
+      "mapsIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+      "aboutTextEn": "Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.",
+      "aboutTextHi": "340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।",
+      "lifeAtSamarthTextEn": "We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.",
+      "lifeAtSamarthTextHi": "हम मानते हैं कि old age home जीवन के अंत की प्रतीक्षा करने की जगह नहीं, बल्कि एक जीवंत समुदाय होना चाहिए जहाँ बुज़ुर्ग गरिमा, खुशी और साथ का अनुभव करें।",
+      "activeQrCode": "/assets/images/qr-default.png",
+      "heroSlides": [
+        "data:image/jpeg;base64,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",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2u0xYz72MLmiUnwr8YUgb1_UkdujihrzE0tSeQjn4A&s=10"
+      ]
+    }
+  },
+  {
+    "id": "mrvkbzue3ue41",
+    "timestamp": "2026-07-22T04:08:56.630Z",
+    "action": "UPDATE",
+    "target": "settings",
+    "details": "Updated site configuration settings",
+    "before": null,
+    "after": {
+      "mealsServed": 150000,
+      "residentsServed": 340,
+      "yearsOfService": 17,
+      "phoneMain": "+91 98765 43210",
+      "phoneEmergency": "+91 99999 88888",
+      "primaryEmail": "info@samarthfoundation.org",
+      "mapsIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+      "aboutTextEn": "Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.",
+      "aboutTextHi": "340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।",
+      "lifeAtSamarthTextEn": "We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.",
+      "lifeAtSamarthTextHi": "हम मानते हैं कि old age home जीवन के अंत की प्रतीक्षा करने की जगह नहीं, बल्कि एक जीवंत समुदाय होना चाहिए जहाँ बुज़ुर्ग गरिमा, खुशी और साथ का अनुभव करें।",
+      "activeQrCode": "/assets/images/qr-default.png",
+      "heroSlides": [
+        "data:image/jpeg;base64,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",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2u0xYz72MLmiUnwr8YUgb1_UkdujihrzE0tSeQjn4A&s=10"
+      ]
+    }
+  },
+  {
+    "id": "mrvkbz9qyksbw",
+    "timestamp": "2026-07-22T04:08:55.886Z",
+    "action": "UPDATE",
+    "target": "settings",
+    "details": "Updated site configuration settings",
+    "before": null,
+    "after": {
+      "mealsServed": 150000,
+      "residentsServed": 340,
+      "yearsOfService": 17,
+      "phoneMain": "+91 98765 43210",
+      "phoneEmergency": "+91 99999 88888",
+      "primaryEmail": "info@samarthfoundation.org",
+      "mapsIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+      "aboutTextEn": "Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.",
+      "aboutTextHi": "340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।",
+      "lifeAtSamarthTextEn": "We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.",
+      "lifeAtSamarthTextHi": "हम मानते हैं कि old age home जीवन के अंत की प्रतीक्षा करने की जगह नहीं, बल्कि एक जीवंत समुदाय होना चाहिए जहाँ बुज़ुर्ग गरिमा, खुशी और साथ का अनुभव करें।",
+      "activeQrCode": "/assets/images/qr-default.png",
+      "heroSlides": [
+        "data:image/jpeg;base64,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",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2u0xYz72MLmiUnwr8YUgb1_UkdujihrzE0tSeQjn4A&s=10"
+      ]
+    }
+  },
+  {
+    "id": "mrvkbtgvclhlw",
+    "timestamp": "2026-07-22T04:08:48.367Z",
+    "action": "UPDATE",
+    "target": "settings",
+    "details": "Updated site configuration settings",
+    "before": null,
+    "after": {
+      "mealsServed": 150000,
+      "residentsServed": 340,
+      "yearsOfService": 17,
+      "phoneMain": "+91 98765 43210",
+      "phoneEmergency": "+91 99999 88888",
+      "primaryEmail": "info@samarthfoundation.org",
+      "mapsIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+      "aboutTextEn": "Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.",
+      "aboutTextHi": "340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।",
+      "lifeAtSamarthTextEn": "We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.",
+      "lifeAtSamarthTextHi": "हम मानते हैं कि old age home जीवन के अंत की प्रतीक्षा करने की जगह नहीं, बल्कि एक जीवंत समुदाय होना चाहिए जहाँ बुज़ुर्ग गरिमा, खुशी और साथ का अनुभव करें।",
+      "activeQrCode": "/assets/images/qr-default.png",
+      "heroSlides": [
+        "data:image/jpeg;base64,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",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2u0xYz72MLmiUnwr8YUgb1_UkdujihrzE0tSeQjn4A&s=10"
+      ]
+    }
+  },
+  {
+    "id": "mrs4x04ugax3j",
+    "timestamp": "2026-07-19T18:34:04.398Z",
+    "action": "CREATE",
+    "target": "bookings",
+    "details": "Created item in bookings with ID: mrs4x04s7uq9m",
+    "before": null,
+    "after": {
+      "honeypot": "",
+      "name": "dvdf",
+      "email": "fvfdsvg@scfe.com",
+      "date": "2026-07-22",
+      "reason": "refef",
+      "id": "mrs4x04s7uq9m",
+      "createdAt": "2026-07-19T18:34:04.396Z",
+      "updatedAt": "2026-07-19T18:34:04.396Z"
+    }
+  },
+  {
+    "id": "mrs4we02f9fak",
+    "timestamp": "2026-07-19T18:33:35.714Z",
+    "action": "DELETE",
+    "target": "donations",
+    "details": "Soft deleted item mrs4vtplstbn2 in donations",
+    "before": {
+      "name": "jh",
+      "email": "dscfdc@hd.com",
+      "amount": 500,
+      "plan": "one-time",
+      "note": "cdsc",
+      "id": "mrs4vtplstbn2",
+      "createdAt": "2026-07-19T18:33:09.417Z",
+      "updatedAt": "2026-07-19T18:33:09.417Z"
+    },
+    "after": {
+      "name": "jh",
+      "email": "dscfdc@hd.com",
+      "amount": 500,
+      "plan": "one-time",
+      "note": "cdsc",
+      "id": "mrs4vtplstbn2",
+      "createdAt": "2026-07-19T18:33:09.417Z",
+      "updatedAt": "2026-07-19T18:33:09.417Z",
+      "deletedAt": "2026-07-19T18:33:35.709Z"
+    }
+  },
+  {
+    "id": "mrs4vtpxmc3hs",
+    "timestamp": "2026-07-19T18:33:09.429Z",
+    "action": "CREATE",
+    "target": "donations",
+    "details": "Created item in donations with ID: mrs4vtplstbn2",
+    "before": null,
+    "after": {
+      "name": "jh",
+      "email": "dscfdc@hd.com",
+      "amount": 500,
+      "plan": "one-time",
+      "note": "cdsc",
+      "id": "mrs4vtplstbn2",
+      "createdAt": "2026-07-19T18:33:09.417Z",
+      "updatedAt": "2026-07-19T18:33:09.417Z"
+    }
+  },
+  {
+    "id": "mrs4ewl3as9oa",
+    "timestamp": "2026-07-19T18:19:59.991Z",
+    "action": "CREATE",
+    "target": "events",
+    "details": "Created item in events with ID: mrs4ewl2fl2ry",
+    "before": null,
+    "after": {
+      "titleEn": "smp",
+      "titleHi": "एसएमपी",
+      "slug": "smp",
+      "date": "2026-07-19",
+      "descEn": "vwrgvrg",
+      "descHi": "vwrgvrg",
+      "status": "Published",
+      "relatedActivityId": "act-1",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxjmEtH0Cy62cvs_lmmA2VHbETnty120w_YlGowGP2Zg&s=10",
+      "id": "mrs4ewl2fl2ry",
+      "createdAt": "2026-07-19T18:19:59.990Z",
+      "updatedAt": "2026-07-19T18:19:59.990Z"
+    }
+  },
+  {
+    "id": "mrs4dy0sl8ei9",
+    "timestamp": "2026-07-19T18:19:15.196Z",
+    "action": "UPDATE",
+    "target": "settings",
+    "details": "Updated site configuration settings",
+    "before": null,
+    "after": {
+      "mealsServed": 150000,
+      "residentsServed": 340,
+      "yearsOfService": 17,
+      "phoneMain": "+91 98765 43210",
+      "phoneEmergency": "+91 99999 88888",
+      "primaryEmail": "info@samarthfoundation.org",
+      "mapsIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+      "aboutTextEn": "Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.",
+      "aboutTextHi": "340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।",
+      "lifeAtSamarthTextEn": "We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.",
+      "lifeAtSamarthTextHi": "हम मानते हैं कि old age home जीवन के अंत की प्रतीक्षा करने की जगह नहीं, बल्कि एक जीवंत समुदाय होना चाहिए जहाँ बुज़ुर्ग गरिमा, खुशी और साथ का अनुभव करें।",
+      "activeQrCode": "/assets/images/qr-default.png",
+      "heroSlides": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxjmEtH0Cy62cvs_lmmA2VHbETnty120w_YlGowGP2Zg&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2u0xYz72MLmiUnwr8YUgb1_UkdujihrzE0tSeQjn4A&s=10"
+      ]
+    }
+  },
+  {
+    "id": "mrs4c6ejxrg7w",
+    "timestamp": "2026-07-19T18:17:52.747Z",
+    "action": "UPDATE",
+    "target": "settings",
+    "details": "Updated site configuration settings",
+    "before": null,
+    "after": {
+      "mealsServed": 150000,
+      "residentsServed": 340,
+      "yearsOfService": 17,
+      "phoneMain": "+91 98765 43210",
+      "phoneEmergency": "+91 99999 88888",
+      "primaryEmail": "info@samarthfoundation.org",
+      "mapsIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+      "aboutTextEn": "Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.",
+      "aboutTextHi": "340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।",
+      "lifeAtSamarthTextEn": "We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.",
+      "lifeAtSamarthTextHi": "हम मानते हैं कि old age home जीवन के अंत की प्रतीक्षा करने की जगह नहीं, बल्कि एक जीवंत समुदाय होना चाहिए जहाँ बुज़ुर्ग गरिमा, खुशी और साथ का अनुभव करें।",
+      "activeQrCode": "/assets/images/qr-default.png",
+      "heroSlides": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2u0xYz72MLmiUnwr8YUgb1_UkdujihrzE0tSeQjn4A&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxjmEtH0Cy62cvs_lmmA2VHbETnty120w_YlGowGP2Zg&s=10"
+      ]
+    }
+  }
+]

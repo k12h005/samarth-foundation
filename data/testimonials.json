@@ -1,0 +1,5 @@
+[
+  { "id": "tst-1", "nameEn": "Shanti Devi", "nameHi": "शांति देवी", "age": 72, "quoteEn": "I was lonely living by myself, but now I do yoga every morning with friends.", "quoteHi": "मैं अकेली रहती थी और अकेलापन महसूस करती थी, लेकिन अब मैं यहाँ दोस्तों के साथ रोज़ सुबह योग करती हूँ।", "isAnonymous": false },
+  { "id": "tst-2", "nameEn": "Ramesh Kumar", "nameHi": "रमेश कुमार", "age": 68, "quoteEn": "The doctors check my blood pressure daily, and the meals are fresh and pure vegetarian.", "quoteHi": "डॉक्टर रोज़ मेरी सेहत की जांच करते हैं, और यहाँ मिलने वाला भोजन एकदम ताज़ा और शुद्ध शाकाहारी है।", "isAnonymous": false },
+  { "id": "tst-3", "nameEn": "Meera Sharma", "nameHi": "मीरा शर्मा", "age": 70, "quoteEn": "My family lives far, but here I feel safe, loved, and physically active.", "quoteHi": "मेरा परिवार दूर रहता है, लेकिन यहाँ मैं सुरक्षित, स्नेही और शारीरिक रूप से सक्रिय महसूस करती हूँ।", "isAnonymous": false }
+]
