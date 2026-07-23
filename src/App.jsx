@@ -49,7 +49,7 @@ export default function App() {
     phoneMain: '+91 98765 43210',
     phoneEmergency: '+91 99999 88888',
     primaryEmail: 'info@samarthfoundation.org',
-    mapsIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9961633519543!2d77.1215!3d28.6304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ5LjQiTiA3N8KwMDcnMTcuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
+    mapsIframeUrl: 'https://maps.google.com/maps?q=Samarth%20Foundation,%201,%20Supan,%20Behind%20JBR%20Arcade,%20Near%20JBR%20Residency,%20Science%20City%20Road,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed',
     aboutTextEn: 'Providing dignified, compassionate, and community-supported care for 340+ elders across Delhi NCR. Join us in making aging a celebration.',
     aboutTextHi: '340+ बुज़ुर्गों के लिए सम्मानजनक, करुणामय और समुदाय-समर्थित देखभाल। आइए उम्र बढ़ने को एक उत्सव बनाएं।',
     lifeAtSamarthTextEn: 'We believe that an old age home should not be a waiting room for the end of life, but a vibrant community where elders can celebrate their golden years with dignity, joy, and companionship.',
